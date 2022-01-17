@@ -1,0 +1,61 @@
+﻿@using PrivateLibrary.BLL.Infrastructure.Enums.Security.Claims
+@using PrivateLibrary.Models.Books
+@using PrivateLibrary.Util.Enums.Security.Roles
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/src/css/site.css" />
+    @await RenderSectionAsync("Styles", false)
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Test3</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+	                <div class="navbar-nav">
+		                <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
+		                <a class="nav-link" asp-controller="Book" asp-action="GetByFilter" asp-route-from="0" asp-route-size="6">Books</a>
+                        @if (User.Identity!.IsAuthenticated)
+                        {
+	                        <a class="nav-link" asp-controller="CustomerBooks" asp-action="GetCurrentSessionCustomer">My Books</a>
+                        }
+		                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+	                </div>
+                    @if (User.IsInRole(@LibraryRoleUnit.Admin))
+                    {
+						<partial name="_AdminPanel"/>
+                    }
+                </div>
+                <div class="d-flex justify-content-end">
+                    <partial name="_LoginHelper" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Test
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/src/js/Common/Alerts.js"></script>
+    @await RenderSectionAsync("Scripts", false)
+</body>
+</html>

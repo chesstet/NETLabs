@@ -1,0 +1,11 @@
+﻿@if (Convert.ToBoolean(User.Identity?.IsAuthenticated))
+{
+	<a class="btn btn-outline-success">@User.Identity?.Name</a>
+	<a class="btn btn-outline-success" asp-action="SignOut" asp-controller="Auth">Logout</a>
+
+}
+else
+{
+	<a class="btn btn-outline-success" asp-action="Login" asp-controller="Auth">Login</a>
+	<a class="btn btn-outline-success" asp-action="Register" asp-controller="Auth">Register</a>
+}

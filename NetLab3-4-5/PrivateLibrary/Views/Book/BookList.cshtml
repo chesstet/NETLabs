@@ -1,0 +1,46 @@
+﻿@using PrivateLibrary.Util.Enums.Security.Roles
+@model PrivateLibrary.ViewModels.Books.BookListViewModel
+
+<div class="row">
+	<div class="col-4">
+		<partial name="_BooksFilterPartial" model="Model?.BookFilterModel" />
+	</div>
+	<div class="col-8">
+		<div class="row row-cols-2 row-cols-md-3 g-4">
+			@{
+				var count = Model?.SearchResultModel?.Entities?.Count < 6 ? Model?.SearchResultModel?.Entities?.Count : 6;
+			}
+			@for (var i = 0; i < count; i++)
+			{
+				var elem = Model?.SearchResultModel?.Entities?.ElementAt(i);
+				<div class="col">
+					<div class="card h-100">
+						<img src="https://loremflickr.com/320/240" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">@elem?.Name</h5>
+							<p class="card-text">@elem?.DirectionName</p>
+							<p class="card-text"><small class="text-muted">@elem?.AuthorName</small></p>
+						</div>
+
+						<div class="card-footer">
+							<a class="btn btn-success" role="button" asp-controller="Book" asp-action="Get" asp-route-id="@elem?.Id">Open</a>
+							<form method="post" asp-controller="CustomerBooks" asp-action="AddBookForCurrentSessionCustomer" asp-route-bookId="@elem?.Id">
+								<button type="submit" class="btn btn-primary">Add to MyCollection</button>
+							</form>
+							@if (User.IsInRole(LibraryRoleUnit.Admin))
+							{
+								<a class="btn btn-warning" role="button" asp-controller="Book" asp-action="Edit" asp-route-id="@elem?.Id">Edit</a>
+								<a class="btn btn-danger" role="button" asp-controller="Book" asp-action="Remove" asp-route-id="@elem?.Id">Remove</a>
+							}
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+@section Scripts
+{
+<script src="~/src/js/Books/BookList.js"></script>
+}

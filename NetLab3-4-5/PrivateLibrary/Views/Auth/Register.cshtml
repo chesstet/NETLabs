@@ -1,0 +1,49 @@
+﻿@model PrivateLibrary.Models.Auth.RegisterModel
+
+<div class="myForm">
+	<form method="post" asp-action="Register" asp-route-returnUrl="@(Model?.ReturnUrl ?? "/")">
+		<div asp-validation-summary="ModelOnly"></div>
+		<div class="mb-2">
+			<label asp-for="Login" class="form-label">Email address</label>
+			<input class="form-control" asp-for="Login" aria-describedby="emailHelp">
+			<span asp-validation-for="Login"></span>
+			<small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+		</div>
+		<div class="mb-2">
+			<label asp-for="Name" class="form-label">Name</label>
+			<input class="form-control" asp-for="Name">
+			<span asp-validation-for="Name"></span>
+		</div>
+		<div class="mb-2">
+			<label asp-for="Surname" class="form-label">Surname</label>
+			<input class="form-control" asp-for="Surname">
+			<span asp-validation-for="Surname"></span>
+		</div>
+		<div class="mb-2">
+			<label asp-for="PhoneNumber" class="form-label">PhoneNumber</label>
+			<input class="form-control" asp-for="PhoneNumber">
+			<span asp-validation-for="Surname"></span>
+		</div>
+		<div class="mb-2">
+			<label asp-for="Password" class="form-label">Password</label>
+			<input asp-for="Password" class="form-control">
+			<span asp-validation-for="Password"></span>
+		</div>
+		<div class="mb-2">
+			<label asp-for="RepeatPassword" class="form-label">RepeatPassword</label>
+			<input asp-for="RepeatPassword" class="form-control">
+			<span asp-validation-for="RepeatPassword"></span>
+		</div>
+		<div class="mb-2 form-check d-flex justify-content-center">
+			<input class="form-check-input me-1" asp-for="Agreement">
+			<label class="form-check-label ms-1" asp-for="Agreement">Do you agree with our politics?</label>
+			<span asp-validation-for="Agreement"></span>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+@section Styles
+{
+	<link rel="stylesheet" href="~/src/css/Auth/Forms.css" />
+}

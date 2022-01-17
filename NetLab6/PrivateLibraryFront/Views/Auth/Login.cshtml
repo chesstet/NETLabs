@@ -1,0 +1,29 @@
+﻿@model PrivateLibraryFront.Models.Auth.LoginModel
+
+<div class="myForm">
+    <form method="post" asp-action="Login" asp-route-returnUrl="@(Model?.ReturnUrl ?? "/")">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="mb-3">
+            <label asp-for="Login" class="form-label">Email address</label>
+            <input class="form-control" asp-for="Login" aria-describedby="emailHelp">
+            <span asp-validation-for="Login"></span>
+            <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Password</label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div class="mb-3 form-check d-flex justify-content-center">
+            <input class="form-check-input me-1" asp-for="Remember">
+            <label class="form-check-label ms-1" asp-for="Remember">Remember?</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        @*<a class="btn btn-info" asp-action="ExternalLogin" asp-route-provider="Google" asp-route-retunUrl="@(Model?.ReturnUrl ?? "/")">Log In With Google</a>*@
+    </form>
+</div>
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/Auth/Forms.css"/>
+}

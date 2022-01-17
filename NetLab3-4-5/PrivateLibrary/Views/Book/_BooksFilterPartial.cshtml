@@ -1,0 +1,37 @@
+﻿@model PrivateLibrary.Models.Books.BookFilter
+
+<form method="get" asp-controller="Book" asp-action="GetByFilter">
+	<div class="input-group">
+		<span class="input-group-text">First and last name</span>
+		<input asp-for="AuthorFirstName" type="text" aria-label="First name" class="form-control">
+		<input asp-for="AuthorLastName" type="text" aria-label="Last name" class="form-control">
+		<span asp-validation-for="AuthorFirstName"></span>
+		<span asp-validation-for="AuthorLastName"></span>
+	</div>
+	
+	<div class="input-group mb-3">
+		<span class="input-group-text" id="bookName">BookName</span>
+		<input asp-for="BookName" type="text" class="form-control" aria-label="Sizing BookName input" aria-describedby="bookName">
+		<span asp-validation-for="BookName"></span>
+	</div>
+	
+@*	<div class="input-group mb-3">
+		<span class="input-group-text" id="searchText">SearchText</span>
+		<input asp-for="SearchText" type="text" class="form-control" aria-label="Sizing SearchText input" aria-describedby="searchText">
+		<span asp-validation-for="SearchText"></span>
+	</div>*@
+	
+	<div class="input-group mb-3">
+		<span class="input-group-text" id="bookYear">BookYear</span>
+		<input asp-for="BookYear" type="text" class="form-control" aria-label="Sizing BookYear input" aria-describedby="bookYear">
+		<span asp-validation-for="BookYear"></span>
+	</div>
+	
+	<div class="input-group mb-3">
+		<span class="input-group-text" id="direction">Direction</span>
+		<input asp-for="DirectionName" type="text" class="form-control" aria-label="Sizing SearchText input" aria-describedby="bookYear">
+		<span asp-validation-for="DirectionName"></span>
+	</div>
+
+	<button type="submit" id="filterSubmit" class="btn btn-primary">Apply</button>
+</form>

@@ -1,0 +1,80 @@
+﻿@model PrivateLibrary.Models.Books.BookModel
+
+<div class="myForm">
+	<form method="post" asp-controller="Book" asp-action="Create">
+		<div class="input-group">
+			<span class="input-group-text">Name</span>
+			<input asp-for="Name" type="text" aria-label="First name" class="form-control">
+			<span asp-validation-for="Name"></span>
+		</div>
+		<hr />
+		<div class="AuthorBlock">
+			<h3>
+				Author:
+				<small class="text-muted">Fill these fields or just connect with existed author by his id.</small>
+			</h3>
+			<div class="input-group mb-3">
+				<span class="input-group-text bg-info" id="authorId">Author Id</span>
+				<input asp-for="Author!.Id" type="text" class="form-control" aria-label="AuthorId" aria-describedby="authorId">
+				<span asp-validation-for="Author!.Id"></span>
+			</div>
+
+			<div class="input-group">
+				<span class="input-group-text" id="bookName">Author name</span>
+				<input asp-for="Author!.FirstName" type="text" class="form-control" aria-label="Author name" aria-describedby="authorName">
+				<span asp-validation-for="Author!.FirstName"></span>
+
+				<span class="input-group-text" id="authorName">Author surname</span>
+				<input asp-for="Author!.LastName" type="text" class="form-control" aria-label="Author surname" aria-describedby="authorName">
+				<span asp-validation-for="Author!.LastName"></span>
+
+				<span class="input-group-text" id="middleName">Author middle name</span>
+				<input asp-for="Author!.MiddleName" type="text" class="form-control" aria-label="Author middleName" aria-describedby="authorMiddleName">
+				<span asp-validation-for="Author!.MiddleName"></span>
+			</div>
+
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="birthDate">BirthDate</span>
+				<input asp-for="Author!.BirthDate" type="date" class="form-control" aria-label="BirthDate" aria-describedby="birthDate">
+				<span asp-validation-for="Author!.BirthDate"></span>
+			</div>
+
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="dateOfDeath">DateOfDeath</span>
+				<input asp-for="Author!.DateOfDeath" type="date" class="form-control" aria-label="DateOfDeath" aria-describedby="dateOfDeath">
+				<span asp-validation-for="Author!.DateOfDeath"></span>
+			</div>
+		</div>
+		<hr />
+		<div class="input-group mb-3">
+			<span class="input-group-text" id="bookYear">BookYear</span>
+			<input asp-for="Year" type="text" class="form-control" aria-label="Sizing BookYear input" aria-describedby="bookYear">
+			<span asp-validation-for="Year"></span>
+		</div>
+		<hr />
+		<div class="DirectionBlock">
+			<h3>
+				Direction:
+				<small class="text-muted">Fill these fields or just connect with existed direction by its id.</small>
+			</h3>
+			<div class="input-group mb-3">
+				<span class="input-group-text bg-info" id="directionId">Direction Id</span>
+				<input asp-for="Direction!.Id" type="text" class="form-control" aria-label="DirectionId" aria-describedby="directionId">
+				<span asp-validation-for="Direction!.Id"></span>
+			</div>
+
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="direction">Direction name</span>
+				<input asp-for="Direction!.Name" type="text" class="form-control" aria-label="Direction name" aria-describedby="direction">
+				<span asp-validation-for="Direction!.Name"></span>
+			</div>
+		</div>
+		<hr />
+		<button type="submit" id="filterSubmit" class="btn btn-primary">Create</button>
+	</form>
+</div>
+
+@section Styles
+{
+<link rel="stylesheet" href="~/src/css/CenteringForm.css" />
+}

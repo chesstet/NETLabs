@@ -1,0 +1,352 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary\\PrivateLibrary.csproj": {}
+  },
+  "projects": {
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\AllResources.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\AllResources.csproj",
+        "projectName": "AllResources",
+        "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\AllResources.csproj",
+        "packagesPath": "C:\\Users\\-Admin-\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\-Admin-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\PrivateLibrary.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\PrivateLibrary.BLL.csproj",
+        "projectName": "PrivateLibrary.BLL",
+        "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\PrivateLibrary.BLL.csproj",
+        "packagesPath": "C:\\Users\\-Admin-\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\-Admin-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\AllResources.csproj": {
+                "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\AllResources\\AllResources.csproj"
+              },
+              "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj": {
+                "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj"
+              },
+              "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\PrivateLibrary.DAL.csproj": {
+                "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\PrivateLibrary.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj",
+        "projectName": "PrivateLibrary.Common",
+        "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj",
+        "packagesPath": "C:\\Users\\-Admin-\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\-Admin-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\PrivateLibrary.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\PrivateLibrary.DAL.csproj",
+        "projectName": "PrivateLibrary.DAL",
+        "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\PrivateLibrary.DAL.csproj",
+        "packagesPath": "C:\\Users\\-Admin-\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\-Admin-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary\\PrivateLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary\\PrivateLibrary.csproj",
+        "projectName": "PrivateLibrary",
+        "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary\\PrivateLibrary.csproj",
+        "packagesPath": "C:\\Users\\-Admin-\\.nuget\\packages\\",
+        "outputPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\-Admin-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\PrivateLibrary.BLL.csproj": {
+                "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.BLL\\PrivateLibrary.BLL.csproj"
+              },
+              "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj": {
+                "projectPath": "D:\\SEM5\\DontNet\\PrivateLibrary\\PrivateLibrary.Common\\PrivateLibrary.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

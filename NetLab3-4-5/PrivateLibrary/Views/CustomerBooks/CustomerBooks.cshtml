@@ -1,0 +1,28 @@
+﻿@model PrivateLibrary.Models.Books.LibraryCustomerModel
+
+<div class="row">
+	<div class="col-8">
+		<div class="row row-cols-2 row-cols-md-3 g-4">
+			@foreach (var elem in Model?.Books!)
+			{
+				<div class="col">
+					<div class="card h-100">
+						<img src="https://loremflickr.com/320/240" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">@elem?.Name</h5>
+							<p class="card-text">@elem?.DirectionName</p>
+							<p class="card-text"><small class="text-muted">@elem?.AuthorName</small></p>
+						</div>
+
+						<div class="card-footer">
+							<a class="btn btn-success" role="button" asp-controller="Book" asp-action="Get" asp-route-id="@elem?.Id">Open</a>
+							<form method="post" asp-controller="CustomerBooks" asp-action="RemoveBookForCurrentSessionCustomer" asp-route-bookId="@elem?.Id">
+								<button type="submit" class="btn btn-danger">Remove</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

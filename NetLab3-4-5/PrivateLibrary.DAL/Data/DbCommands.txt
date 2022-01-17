@@ -1,0 +1,5 @@
+﻿dotnet ef -s ../PrivateLibrary migrations add InitialCreate -c IdentityDbContext -o Data/Migrations/Identity
+dotnet ef -s ../PrivateLibrary database update -c IdentityDbContext
+
+dotnet ef -s ../PrivateLibrary migrations add InitialCreate -c LibraryDbContext -o Data/Migrations/Library
+dotnet ef -s ../PrivateLibrary database update -c LibraryDbContext
